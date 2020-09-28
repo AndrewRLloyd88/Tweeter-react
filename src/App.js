@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import { Navigation } from './components/Navigation'
 import { Profile } from './components/Profile'
@@ -6,7 +6,7 @@ import { TweetForm } from './components/TweetForm'
 import { Tweet } from './components/Tweet'
 
 
-const tweetsData = [
+const initialTweetData = [
   {
     name: "Andrew Lloyd",
     handle: "@ARL1988",
@@ -43,18 +43,39 @@ const tweetsData = [
 
 
 function App() {
+  const [tweetData, setTweetData] = useState(initialTweetData)
+
+
  //map is the equivalent of renderTweets() in the old version
-  const tweets = tweetsData.map((tweetData, index) => {
+  const tweets = tweetData.map((tweetData, index) => {
     return <Tweet key={index} name={tweetData.name} handle={tweetData.handle} profile_image={tweetData.profile_image} text={tweetData.text} date={tweetData.date}/>
   })
 
+
+  //prepends a new tweet
+  const addNewTweet = text => {
+    const newTweet = {
+      name: "Amy Mansell",
+      handle: "@AitsAmy",
+      profile_image: "https://i.imgur.com/DVpDmdR.png",
+      text,
+      date: "5 Days Ago"
+    }
+
+    //prepends the newTweet to the array of tweetData equiv of prepend jQuery
+    //this is how the useState hook work
+    setTweetData([newTweet, ...tweetData])
+  }
+
+//we need to add a controlled form
   return (
     
-    <div className="App">
+    <div className="App" >
     <Navigation />
      <Profile />
     <main className="container">
-     <TweetForm />
+    //giving tweetform access as a prop to new tweet
+     <TweetForm addNewTweet={addNewTweet} />
      <section id="tweet-container" className="tweet-container">
      {tweets}
      </section>
