@@ -1,0 +1,30 @@
+/* styling our page header containing our name and avatar */
+.page-header {
+  height: 400px;
+  background-color: #ef8354;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 120px;
+} 
+
+
+/* generic classes */
+
+/* used for our full name */
+.name {
+  color: white;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+/* used for the span */
+.bold {
+  font-weight: 600;
+} 
+
+/* media queries */
+

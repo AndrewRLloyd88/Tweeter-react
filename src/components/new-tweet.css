@@ -1,0 +1,68 @@
+/* styling the tweet button */
+.compose-tweet {
+  border: none;
+  font-family: "Bungee", "sans-serif";
+  background-color:#4056A1;
+  color: #ffffff;
+}
+
+.nav-toggle {
+  border: none;
+  font-family: "Source Sans Pro", "sans-serif";
+  background-color:#4056A1;
+  color: #ffffff;
+}
+
+.compose-tweet:hover {
+  box-shadow: 3px 3px 3px #4056A1;
+}
+
+/* new tweet textarea formatting */
+#tweet-text {
+  outline: none;
+  overflow: hidden;
+  display: block;
+  resize: none;
+  border: none;
+  border-bottom: solid;
+  background-color: #f4f1ec;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 5px;
+  height: 30px;
+  width: 100%;
+} 
+
+
+.counter {
+  font-family: 'Bungee', "sans-serif";
+}
+
+/* dynamicly apply when character limit of 140 is reached*/
+.limit-reached {
+  color: #ff0000;
+}
+
+/* generic classes */
+
+/* apply flex row */
+.flex-row {
+  display: flex;
+}
+
+/* space content evenly in container */
+.space-around {
+  align-content: space-around;
+}
+
+/* add margin of 15px to space out our button/counter from input */
+.margin-top {
+  margin-top: 15px;
+}
+
+/* bold for the counter, what are you humming about etc... */
+.bold {
+  font-weight: bold;
+}
+

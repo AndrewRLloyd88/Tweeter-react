@@ -1,0 +1,89 @@
+/* encompasses the whole article */
+
+/* outer border of each tweet */
+.indiv-tweet {
+  border: solid;
+  margin: 50px 0;
+}
+
+/* contains avatar handle and tag */
+.indiv-tweet header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* specifically style and right align the @handle */
+header > .handle {
+  margin-left: auto;
+  color: #9ca1b6;
+  display: none;
+}
+
+/* add pading to avatar */
+header > .avatar {
+  padding-right: 10px;
+}
+
+/* contains main tweet body */
+.indiv-tweet main {
+width: 96%;
+padding: 0 10px 50px 10px;
+margin: 0 auto;
+border-bottom: solid;
+}
+
+/* contains date composed and buttons */
+.indiv-tweet footer {
+  font-size: 0.7em;
+}
+
+/* contains timestamp and tweet actions */
+footer > .date-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* color icons blue */
+footer * .tweet-icons {
+  color: rgba(64, 85, 161, 0.2);
+}
+
+/* hover effect for individual tweets */
+/* hover effect for box shadow outer border */
+.indiv-tweet:hover {
+  box-shadow: 10px 10px 5px #4055A1
+}
+
+/* hover effect for main content to be bold */
+.indiv-tweet:hover .overflow {
+  font-weight: bold;
+}
+
+/* hover effect for date content to be bold */
+.indiv-tweet:hover .date {
+  font-weight: bold;
+}
+
+.indiv-tweet:hover .handle {
+  display: flex;
+}
+
+.indiv-tweet:hover .tweet-icons {
+  color: rgba(64, 85, 161, 1);
+}
+
+/* generic classes */
+
+/* add a padding to all of our content within article */
+.padding-20 {
+  padding: 10px 20px;
+}
+
+/* Solve issue #2 on github with long tweets going off page*/
+.overflow {
+  overflow-wrap: break-word;
+}
+
+
