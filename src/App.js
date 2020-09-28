@@ -68,13 +68,13 @@ function App() {
   }
 
 //we need to add a controlled form
+    //giving tweetform access as a prop to new tweet
   return (
     
     <div className="App" >
     <Navigation />
      <Profile />
     <main className="container">
-    //giving tweetform access as a prop to new tweet
      <TweetForm addNewTweet={addNewTweet} />
      <section id="tweet-container" className="tweet-container">
      {tweets}
