@@ -1,11 +1,16 @@
 import React from "react";
+import './individual-tweet.css'
 
 export const Tweet = props => {
   const {name, handle, text, profile_image, date} = props
+
   return (
- 
+
+        <>
+    {name && handle && text && profile_image && date &&
+      (
     <article className="indiv-tweet">
-      <header className="padding-20">
+        <header className="padding-20">
         <img className="avatar" src={profile_image} />
         <div>{name}</div>
         <div className="handle">{handle}</div>
@@ -24,6 +29,9 @@ export const Tweet = props => {
         </div>
       </footer>
     </article>
+      )
+      }
+      </>
 
 
 
